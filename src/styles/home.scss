@@ -1,0 +1,78 @@
+@import "variables";
+
+$footer-bg: #2b2b2b;
+$jumbotron-bg: #e5e9ed;
+$list-style-color: #ee315e;
+
+.kedoo-home,
+.kedoo-help {
+  background-color: #f5f5f5;
+  
+  .navbar-brand::before,
+  .footer-logotype::before {
+    background-image: url("../images/home/tr-home-yellow.png");
+  }
+
+  main h2::before {
+    background-image: url("../images/home/tr-home.png");
+  }
+  
+  footer {
+    background-color: $footer-bg;
+    color: $white;
+  }
+}
+
+.kedoo-home {
+
+  // sections
+  
+  .stats-item {
+    p.lead {
+      @include font-size(120px);
+      font-weight: 900;
+      small {
+        @include font-size(48px);
+        font-weight: 800;
+        text-transform: uppercase;
+      }
+    }
+    p + p {
+      @include font-size(24px);
+    }
+
+    @include media-breakpoint-down(md) {
+      p.lead {
+        @include font-size(110px);
+        small {
+          @include font-size(40px);
+        }
+      }
+      p + p {
+        @include font-size(22px);
+      }
+    }
+  }
+  
+  .content-jumbotron {
+    background-color: $jumbotron-bg;
+    padding: 0;
+  }
+}
+
+.kedoo-help {
+  h3 {
+    @include font-size(36px);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  p, ul {
+    @include font-size(20px);
+  }
+
+  table {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+}

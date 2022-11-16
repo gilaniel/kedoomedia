@@ -1,0 +1,346 @@
+@import "variables";
+
+
+$body-color: #2b2b2b;
+$active-color: #b99653;
+$footer-bg: #222;
+$list-style-color: #ee315e;
+
+.btn-media {
+  @include button-variant($active-color, $active-color);
+}
+
+.btn-outline-media {
+  @include button-outline-variant($active-color, $white);
+}
+
+.btn-caseitem {
+  @include button-variant($active-color, $active-color);
+  background-color: $white;
+  border-color: $white;
+  color: $active-color;
+}
+
+.kedoo-media {
+  color: $body-color;
+
+  .logo {
+    @include media-breakpoint-down(xs) {
+      display: none;
+    }
+  }
+  .logo-m {
+    display: none;
+    @include media-breakpoint-down(xs) {
+      display: block;
+    }
+  }
+  
+  .navbar-brand::before,
+  main h2::before,
+  .footer-logotype::before {
+    background-image: url("../images/media/tr-media.png");
+  }
+  
+  footer {
+    background-color: $footer-bg;
+    color: $white;
+  }
+
+  .slick-arrow::before {
+    color: $active-color;
+  }
+  
+  // sections
+
+  .fullsize-section__content-wrapper {
+    @include image-background('../images/media/bg.png', cover);
+    background-position: center center;
+  }
+  
+  .benefit-item {
+    
+    @include media-breakpoint-up(xl) {
+      flex: 0 0 560px;
+      max-width: 100%;
+    }
+
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 40px
+    }
+    // text-align: center;
+    // padding-left: 1rem;
+    // padding-right: 1rem;
+    
+    img {   
+      // margin-bottom: 1.35rem;
+    }
+
+    h3 {
+      @include font-size(40px);
+      font-weight: bold;
+      margin-bottom: 16px
+    }
+    
+    p {
+      @include font-size(24px);
+    }
+  }
+
+  .benefits-container  {
+    position: relative;
+    margin-top: 90px;
+
+    .row:nth-child(2) {
+      margin-top: 280px;
+
+      @include media-breakpoint-down(md) {
+        margin-top: 0;
+      }
+    }
+  }
+
+  .benefit-img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    transition: width .3s ease;
+
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
+  }
+  
+  .tops-section {
+    .jumbotron {
+      height: 100%;
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    h3 {
+      @include font-size(30px);
+      font-weight: 900;
+      // margin-bottom: 2rem;
+    }
+  }
+
+  .partners-items:nth-child(2) {
+    margin-top: 60px;
+
+
+    @include media-breakpoint-down(sm) {
+      margin-top: 0;
+    }
+  }
+
+  .partners-item {
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 40px;
+      text-align: center;
+    }
+  }
+
+  .case-item {
+    position: relative;
+    background-color: #f1f1f1;
+
+    .case-item__image {
+      max-width: 330px;
+      height: 100%;
+
+      .btn {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: 1;
+        
+        span {
+          vertical-align: middle;
+        }
+  
+        span.caret-right {
+          @include caret(right);
+          &:after {
+            vertical-align: initial;
+          }
+          margin-right: .75rem;
+        }
+      }
+
+      @include media-breakpoint-down(md) {
+        max-width: 150px;
+      }
+    }
+
+    
+
+    .media-body {
+      padding: 48px 56px 62px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      @include media-breakpoint-down(md) {
+        padding: 24px 36px 26px;
+      }
+
+      h5 {
+        @include font-size(16px);
+        font-weight: 900;
+      }
+      h3 {
+        @include font-size(48px);
+        font-weight: bold;
+        line-height: 50px;
+      }
+
+      .case-desc {
+        font-size: 18px;
+        max-width: 460px;
+        line-height: 20px;
+
+        @include media-breakpoint-down(md) {
+          display: none
+        }
+      }
+
+      p {
+        @include font-size(18px);
+      }
+      ul {
+        @include font-size(14px);
+        font-weight: bold;
+      }
+
+      @include media-breakpoint-down(md) {
+        h5 {
+          @include font-size(10px);
+        }
+        h3 {
+          @include font-size(24px);
+        }
+        p {
+          @include font-size(9px);
+        }
+        ul {
+          @include font-size(9px);
+        }
+      }
+    }
+  }
+
+  .case-item__stats {
+    h4 {
+      @include font-size(44px);
+      font-weight: 900;
+    }
+    h4, p {
+      margin-bottom: 0;
+    }
+    a {
+      @include font-size(12px);
+      color: #5E5E5E;
+      text-decoration: underline;
+    }
+
+    @include media-breakpoint-down(md) {
+      h4 {
+        @include font-size(20px);
+      }
+      p {
+        font-size: .75rem !important;
+      }
+    }
+  }
+
+  .news-item {
+    p {
+      @include font-size(18px);
+      margin-bottom: 2rem;
+    }
+    span {
+      @include font-size(14px);
+      color: #bfbfbf;
+    }
+  }
+
+  .influencer-section {
+    h3 {
+      @include font-size(30px);
+      min-height: 75px;
+    }
+  }
+
+  .mediatools__section {
+    ul.mediatools__nav {
+      padding-left: 2rem;
+
+      li {
+        text-transform: uppercase;
+        list-style-type: none;
+        margin-bottom: .5rem;
+        
+        a {
+          color: #222;
+        }
+      }
+
+      li.active {
+        position: relative;
+        padding-left: 1rem;
+        
+        a {
+          color: $active-color;
+          pointer-events: none;
+        }
+
+        &::after {
+          content: '';
+          position: absolute;
+          height: 2px;
+          width: 2rem;
+          background-color: $active-color;
+          left: -2rem;
+          top: 50%;
+          margin-top: -1px;
+        }
+      }
+    }
+    .jumbotron {
+      color: $white;
+      background-color: $body-color;
+
+      ul li {
+        @include caret(right);
+        position: relative;
+        list-style-type: none;
+        &::after {
+          position: absolute;
+          left: 0;
+          margin-left: -2.35rem;
+          top: 50%;
+          margin-top: -.3em;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1350px) {
+  .kedoo-media .benefit-img {
+    width: 300px;
+  }
+}
+
+
+@include media-breakpoint-up(md) {
+  .influencer-section {
+    .jumbotron {
+      height: 100%;
+    }
+  }
+}

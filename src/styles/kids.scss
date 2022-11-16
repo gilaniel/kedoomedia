@@ -1,0 +1,494 @@
+@import "variables";
+@import "~sass-mediascreen/mediascreen";
+
+$body-color: #222;
+$body-bg: #e4f7ff;
+$footer-bg: #ffdcf1;
+$footer-color: #42343c;
+
+$blue-bg: #b0e7ff;
+$yellow-bg: #ffecba;
+$orange-color: #ff7a00;
+// $active-color: #0066ff;
+$active-color: #0d52be;
+$pink-color: #ff5c70;
+$blue-color: #3bc1fa;
+
+@mixin wave-decoration($image, $height) {
+  position: relative;
+  
+  &::before {
+    position: absolute;
+    content: "";
+    display: block;
+    top: -$height;
+    left: 0;
+    height: $height;
+    width: 100%;
+    @include image-background($image, contain);
+    background-position-y: bottom;
+  }
+}
+
+@mixin decoration-image($image, $width, $height) {
+  @include image-background($image, contain);
+  position: absolute;
+  width: $width;
+  height: $height;
+  // z-index: 1;
+}
+
+.btn-kids {
+  @include button-variant($orange-color, $orange-color);
+  @include image-background("../images/kids/button.svg");
+  height: 64px;
+
+  &, &:hover, &:focus, &:active {
+    outline: none;
+    background-color: transparent !important;
+    border-color: transparent !important;
+    box-shadow: none !important;
+  }
+  
+  &:hover {
+    background-image: url('../images/kids/btn-hover.svg');
+  }
+  
+  &:active {
+    background-image: url('../images/kids/btn-active.svg');
+  }
+}
+
+.kedoo-kids {
+  background-color: $body-bg;
+  color: $body-color;
+
+  main {
+    h3 {
+      color: #3a3527;
+      font-weight: bold;
+    }
+    h2 {
+      color: $orange-color;
+      font-weight: 900;
+    }
+    @include media-breakpoint-up(md) {
+      margin-top: 150px;
+    }
+  }
+
+  .slick-arrow::before {
+    color: $active-color;
+  }
+
+  .fullsize-section {
+    img + h2 {
+      margin-top: 1rem;
+      &::before {
+        display: none;
+      }
+    }
+    h2, p {
+      color: $active-color;
+    }
+  }
+
+  // .fullsize-scroller::before {
+  //   border-color: $blue-color transparent transparent transparent;
+  // }
+
+  .jumbotron {
+    margin-bottom: 0;
+  }
+
+  .catalog-item,
+  .catalog-item__new {
+    // position: relative;
+    border-radius: 5rem;
+    // width: 248px;
+    // height: 350px;
+    overflow: hidden;
+    box-shadow: 1rem 1rem #ffe1a6;
+  }
+    
+  .catalog-item {
+    p {
+      @include font-size(24px);
+      background-color: #DAFFD4;
+      position: absolute;
+      bottom: 0;
+      color: #0F932C;
+      width: 100%;
+      margin-bottom: 0;
+      padding-bottom: 1rem;
+      text-align: center;
+
+      &::before {
+        content: "";
+        display: block;
+        background-image: url('../images/kids/catalog-bg.png');
+        height: 28px;
+        width: 100%;
+        top: -25px;
+        position: absolute;
+      }
+    }
+  }
+
+  .catalog-item__new {
+    @include button-variant($orange-color, $orange-color, #ff9b04);
+    @include font-size(24px);
+
+    font-weight: bold;
+    text-transform: uppercase;
+
+    &, &:hover {
+      color: $white;
+      text-decoration: none;
+    }
+
+    &::after {
+      position: absolute;
+      bottom: 3rem;
+      content: "";
+      display: block;
+      background-image: url('../images/kids/arrow.png');
+      width: 80px;
+      height: 41px;
+    }
+    
+  }
+
+  .content-item ul:not(.slick-dots) li {
+    list-style-type: none;
+    position: relative;
+    &::before {
+      content: "";
+      display: block;
+      background-image: url('../images/kids/ul-li-blue.png');
+      position: absolute;
+      top: 0;
+      left: -2.4rem;
+      margin-top: .35rem;
+      width: 23px;
+      height: 24px;
+    }
+  }
+
+  .content-item.pink-dots ul li::before {
+    background-image: url('../images/kids/ul-li-pink.png');
+  }
+
+  .navbar-brand::before,
+  main h2::before,
+  .footer-logotype::before {
+    background-image: url("../images/kids/tr-kids.png");
+  }
+
+  .footer-wrapper {
+    @include wave-decoration("../images/kids/kids-footer-bg.png", 95px);
+    background-color: $footer-bg;
+  }
+
+  footer {
+    position: relative;
+    z-index: 2;
+    
+    &, .list-inline-item a {
+      color: $footer-color !important;
+    }
+
+    .floating-label-group {
+      .form-control {
+        &, &:focus {
+          color: $body-color;
+          background-color: transparent;
+        }
+        
+        border-bottom-color: rgba($body-color, 0.2);
+        
+        &:focus {
+          border-bottom-color: $body-color;
+        }
+      }
+    }
+  }
+
+  @include portrait() {
+    .fullsize-section {
+      height: auto;
+      padding-bottom: 12rem;
+    }
+  }
+
+  @include device(mobile iphone5 iphone6 iphone6plus iphonex iphonexr iphonexsmax, landscape) {
+    .fullsize-section {
+      padding-bottom: 18rem;
+    }
+    .decarations__cloud-top {
+      top: 0;
+    }
+  }
+
+}
+
+// decorations
+
+.pink-header {
+  color: $pink-color !important;
+}
+
+.blue-header {
+  color: $blue-color !important;
+}
+
+.yellow-wave {
+  position: relative;
+
+  padding-bottom: 150px;
+  
+  &::after {
+    position: absolute;
+    content: "";
+    display: block;
+    bottom: 0;
+    // top: -212px;
+    left: 0;
+    height: 212px;
+    width: 100%;
+    @include image-background("../images/kids/kids-yellow-bg.png", contain);
+    background-position-y: bottom;
+  }
+}
+
+.blue-waves {
+  // @include wave-decoration("../images/kids/waves-bg.png", 350px);
+  position: absolute;
+  content: "";
+  display: block;
+  // top: -350px;
+  left: 0;
+  height: 350px;
+  width: 100%;
+  @include image-background('../images/kids/waves-bg.png', contain);
+  background-position-y: bottom;
+
+  @include media-breakpoint-down(sm) {
+    background-image: none;
+  }
+}
+
+.yellow-bg {
+  background-color: $yellow-bg;
+}
+
+.blue-bg {
+  background-color: $blue-bg;
+}
+
+.decarations__balloon {
+  @include decoration-image("../images/kids/balloon.png", 142px, 198px);
+  right: 10%;
+  top: 5%;
+  width: 18%;
+}
+
+.decorations__octopus {
+  @include decoration-image("../images/kids/medus.png", 216px, 292px);
+  right: 5%;
+  top: 0;
+}
+
+.decorations__bubbles {
+  @include decoration-image("../images/kids/bubbles.png", 287px, 426px);
+  right: 5rem;
+  top: 14rem;
+}
+
+.decorations__coral {
+  @include decoration-image("../images/kids/coral.png", 308px, 742px);
+  z-index: 1;
+  
+  right: 0;
+  bottom: -60%;
+  width: 12%;
+  
+  @include media-breakpoint-down(md) {
+    width: 20%;
+  }
+}
+
+.decorations__coral2 {
+  @include decoration-image("../images/kids/coral2.png", 333px, 298px);
+  
+  top: 3%;
+  right: 10%;
+  width: 30%;
+  
+  @include media-breakpoint-up(sm) {
+    top: 0;
+    width: 25%;
+  }
+  @include media-breakpoint-up(md) {
+    top: -5%;
+    width: 22%;
+  }
+  @include media-breakpoint-up(lg) {
+    width: 15%;
+  }
+}
+
+.decorations__coral3 {
+  @include decoration-image("../images/kids/coral3.png", 266px, 344px);
+  
+  top: -8%;
+  right: 5%;
+  width: 25%;
+
+  @include media-breakpoint-up(sm) {
+    top: -12%;
+  }
+  @include media-breakpoint-up(md) {
+    top: 5%;
+    right: 15%;
+    width: 30%;
+  }
+  @include media-breakpoint-up(lg) {
+    top: 0;
+    width: 15%;
+  }
+}
+
+.decarations__cloud-top {
+  @include decoration-image("../images/kids/navbar-bg.png", 100%, 102px);
+  top: -15px;
+  left: 0;
+}
+
+.decarations__cloud-left {
+  @include decoration-image("../images/kids/cloud-l.png", 348px, 448px);
+  top: 30%;
+  left: 0;
+}
+
+.decarations__cloud-middle {
+  @include decoration-image("../images/kids/cloud-m.png", 574px, 222px);
+  
+  @include media-breakpoint-up(sm) {
+    top: 20%;
+    left: 40%;
+    width: 25%;
+  }
+
+  @include media-breakpoint-up(md) {
+    top: 20%;
+    left: 40%;
+    width: 30%;
+  }
+  
+  @include media-breakpoint-up(lg) {
+    width: 25%;
+  }
+}
+
+.decarations__cloud-right {
+  @include decoration-image("../images/kids/cloud-r.png", 281px, 216px);
+  right: 0;
+  top: 20%;
+}
+
+.decarations__boat {
+  @include decoration-image("../images/kids/boat.png", 1161px, 570px);
+  background-position: bottom right;
+  
+  right: 8%;
+  // bottom: 2%;
+  width: 90%;
+
+  @include media-breakpoint-up(sm) {
+    // bottom: 4%;
+    width: 80%;
+  }
+  @include media-breakpoint-up(md) {
+    // bottom: 0;
+    width: 60%;
+  }
+  @include media-breakpoint-down(md) {
+    // bottom: -2%;
+  }
+  // @include media-breakpoint-up(lg) {
+  //   bottom: 0%;
+  // }
+  // @include media-breakpoint-up(xl) {
+  //   bottom: 2%;
+  // }
+}
+
+.decarations__boat-sm {
+  @include decoration-image("../images/kids/boat-sm.png", 800px, 479px);
+  background-position: bottom right;
+
+  bottom: 0;
+  right: 0;
+  width: 100%;
+}
+
+.decarations__fish {
+  @include decoration-image("../images/kids/fish.png", 380px, 136px);
+  z-index: 3;
+
+  // bottom: -8%;
+  right: 25%;
+  width: 20%;
+
+  @include media-breakpoint-down(md) {
+    // width: 150px;
+    right: 10%;
+    // bottom: -10%;
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .kedoo-kids {
+
+    .navbar::after {
+      display: none;
+    }
+
+    .decarations__cloud-left {
+      width: 250px;
+    }
+
+    .decarations__fish {
+      width: 150px;
+      right: 10%;
+      // bottom: -10%;
+    }
+
+    .decorations__octopus {
+      width: 150px;
+    }
+  }
+}
+
+
+.blue-waves {
+  bottom: -150px;
+}
+
+.decarations__boat {
+  bottom: -8%;
+  @include media-breakpoint-down(lg) {
+    bottom: -12%;
+  }
+}
+
+.decarations__fish {
+  bottom: -8%;
+  @include media-breakpoint-down(xl) {
+    bottom: -20%;
+  }
+  @include media-breakpoint-down(lg) {
+    bottom: -20%;
+  }
+}

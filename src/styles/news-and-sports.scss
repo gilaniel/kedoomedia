@@ -1,0 +1,84 @@
+@import "variables";
+
+
+$color: #0d2031;
+$title-color: #0d2031;
+
+$footer-bg: #0d2031;
+$list-style-color: #0080ff;
+
+.kedoo-news-and-sports {
+  body {
+    color: $color;
+  }
+
+  .navbar-brand::before,
+  main h2::before,
+  .footer-logotype::before {
+    background-image: url("../images/news-and-sports/tr-news-and-sports-3.png");
+  }
+
+  main {
+    h2, h3 {
+      color: $title-color;
+    }
+  }
+
+  footer {
+    background-color: $footer-bg;
+    color: $white;
+  }
+
+  // sections
+
+  .fullsize-section__content-wrapper {
+    @include image-background('../images/news-and-sports/bg.jpg', cover);
+    background-position: center center;
+  }
+
+  .main-section__bg {
+    @include absolute-fullsize;
+    background-color: rgba(#000, .35);
+    
+    width: 100%;
+
+    @include media-breakpoint-up(md) {
+      width: 70%;
+    }
+    @include media-breakpoint-up(lg) {
+      width: 60%;
+    }
+  }
+
+  .content-item {
+    ul li {
+      list-style-type: none;
+      position: relative;
+      &::before {
+        @include triangle(right, .9rem, .65rem, $list-style-color);
+        position: absolute;
+        left: -2.4rem;
+        top: 0;
+        margin-top: .55rem
+      }
+    }
+  }
+
+  .jumbotron {
+    background-color: $footer-bg;
+
+    h2, h3, p, ul {
+      color: $white;
+    }
+
+    h2::before {
+      background-image: url("../images/news-and-sports/tr-news-and-sports-4.png");
+    }
+
+    ul li {
+      &::before {
+        border-color: transparent transparent transparent #fe5959;
+      }
+    }
+  }
+}
