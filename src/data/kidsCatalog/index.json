@@ -1,0 +1,46 @@
+{
+  "en": [
+    {
+      "image": "./images/catalog1.png",
+      "title": "Oddbods"
+    },
+    {
+      "image": "./images/catalog2.png",
+      "title": "Booba"
+    },
+    {
+      "image": "./images/catalog3.png",
+      "title": "Leo and tig"
+    },
+    {
+      "image": "./images/catalog4.png",
+      "title": "Om Nom"
+    },
+    {
+      "image": "./images/catalog5.png",
+      "title": "The Smurfs"
+    }
+  ],
+  "ru": [
+    {
+      "image": "./images/catalog1.png",
+      "title": "Чуддики"
+    },
+    {
+      "image": "./images/catalog2.png",
+      "title": "Буба"
+    },
+    {
+      "image": "./images/catalog3.png",
+      "title": "Лео и Тиг"
+    },
+    {
+      "image": "./images/catalog4.png",
+      "title": "Ам Ням"
+    },
+    {
+      "image": "./images/catalog5.png",
+      "title": "Смурфики"
+    }
+  ]
+}

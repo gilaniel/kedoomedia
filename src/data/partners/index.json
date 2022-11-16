@@ -1,0 +1,34 @@
+[
+  {
+    "title": "E-One",
+    "image": "./images/e-one.png"
+  },
+  {
+    "title": "STS Media",
+    "image": "./images/sts-media.png"
+  },
+  {
+    "title": "Forbes",
+    "image": "./images/forbes.png"
+  },
+  {
+    "title": "Flame",
+    "image": "./images/flame.png"
+  },
+  {
+    "title": "one.animation",
+    "image": "./images/one-animation.png"
+  },
+  {
+    "title": "Russia",
+    "image": "./images/russia.png"
+  },
+  {
+    "title": "IMPS",
+    "image": "./images/imps.png"
+  },
+  {
+    "title": "ZeptoLab",
+    "image": "./images/zeptolab.png"
+  }
+]

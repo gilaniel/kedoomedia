@@ -1,0 +1,47 @@
+[
+  {
+    "id": "apple",
+    "title": "Apple",
+    "image": "./images/Apple.png"
+  },
+  {
+    "id": "netflix",
+    "title": "Netflix",
+    "image": "./images/Netflix.png"
+  },
+  {
+    "id": "primevideo",
+    "title": "PrimeVideo",
+    "image": "./images/PrimeVideo.png"
+  },
+  {
+    "id": "roku",
+    "title": "Roku",
+    "image": "./images/Roku.png"
+  },
+  {
+    "id": "samsungtvplus",
+    "title": "Samsung TV Plus",
+    "image": "./images/SamsungTvPlus.png"
+  },
+  {
+    "id": "yandex",
+    "title": "Yandex",
+    "image": "./images/Yandex.png"
+  },
+  {
+    "id": "youtube",
+    "title": "YouTube",
+    "image": "./images/YouTube.png"
+  },
+  {
+    "id": "samsung",
+    "title": "Samsung",
+    "image": "./images/Samsung.png"
+  },
+  {
+    "id": "dailymotion",
+    "title": "Dailymotion",
+    "image": "./images/Dailymotion.png"
+  }
+]

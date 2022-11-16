@@ -1,0 +1,18 @@
+[
+  {
+    "image": "./images/catalog1.png",
+    "coming_soon": true
+  },
+  {
+    "image": "./images/catalog2.png",
+    "coming_soon": false
+  },
+  {
+    "image": "./images/catalog3.png",
+    "coming_soon": false
+  },
+  {
+    "image": "./images/catalog4.png",
+    "coming_soon": false
+  }
+]
