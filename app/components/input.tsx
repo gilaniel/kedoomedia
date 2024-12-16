@@ -15,7 +15,6 @@ export const Input = ({
   label: string;
   isError: boolean;
 }) => {
-  console.log(label, isError);
   return (
     <>
       <label className={`label ${isError && "error"} `}>{label}</label>

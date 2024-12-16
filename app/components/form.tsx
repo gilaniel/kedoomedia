@@ -74,12 +74,10 @@ export const Form = () => {
     }
   };
 
-  console.log(error);
-
   return (
     <div className="flex flex-col gap-10 lg:max-w-[560px] w-full">
-      <div className="flex flex-col lg:flex-row gap-10">
-        <div className="basis-1 lg:basis-1/3">
+      <div className="flex flex-col md:flex-row gap-10">
+        <div className="basis-1 md:basis-1/3">
           <Input
             name="name"
             handleChange={handleInputChange}
@@ -88,7 +86,7 @@ export const Form = () => {
             isError={error["name"]}
           />
         </div>
-        <div className="basis-1 lg:basis-1/3">
+        <div className="basis-1 md:basis-1/3">
           <Input
             name="company"
             handleChange={handleInputChange}
@@ -97,7 +95,7 @@ export const Form = () => {
             isError={error["company"]}
           />
         </div>
-        <div className="basis-1 lg:basis-1/3">
+        <div className="basis-1 md:basis-1/3">
           <Input
             name="email"
             handleChange={handleInputChange}

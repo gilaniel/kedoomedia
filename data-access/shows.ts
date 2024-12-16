@@ -10,6 +10,8 @@ export const shows: ShowItem[] = [
     video: "100+ серий по 60 минут, больше в разработке",
     genre: "Интервью со звездой, Самопознание, Кофестори",
     audition: "Мужчины, Женщины, 18-35 лет",
+    subs: "2.81М",
+    views: "700M+",
     lang: "Русский",
     links: [
       { name: "YouTube", link: "" },
@@ -26,6 +28,8 @@ export const shows: ShowItem[] = [
     video: "100+ серий по 60 минут, больше в разработке",
     genre: "Экстримальный тревел, Экстремальная еда, SHORTS",
     audition: "Мужчины, Женщины, 18-35 лет",
+    subs: "1.5М",
+    views: "2.81М",
     lang: "Русский",
     links: [
       { name: "YouTube", link: "" },
@@ -42,6 +46,8 @@ export const shows: ShowItem[] = [
     video: "100+ серий по 60 минут, больше в разработке",
     genre: "Технологии будущего, SHORTS",
     audition: "Мужчины, Женщины, 18-35 лет",
+    subs: "1.5М",
+    views: "2.1M",
     lang: "Русский",
     links: [
       { name: "YouTube", link: "" },
