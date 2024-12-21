@@ -15,7 +15,7 @@ export const Logo = () => {
     <>
       <div className="flex relative w-full xl:hidden justify-center">
         <motion.div
-          initial={{ y: "50vh" }}
+          initial={{ y: "calc(50vh - 30px)" }}
           animate={{ y: 0 }}
           transition={{ delay: 0.9, duration: 1, ease: "easeOut" }}
         >
