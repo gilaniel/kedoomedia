@@ -37,7 +37,7 @@ export const Hero = () => {
           animate={{ opacity: 1 }}
           transition={{ delay: 1.2, duration: 0.6, ease: "easeOut" }}
         >
-          <h1 className="max-w-full xl:max-w-[730px] min-[1440px]:max-w-[840px] min-[1930px]:max-w-[1280px] min-[2230px]:max-w-[1480px] mt-[200px] md:mt-[160px] xl:mt-0 xl:translate-y-[-20px]">
+          <h1 className="max-w-full xl:max-w-[730px] min-[1440px]:max-w-[840px] min-[1930px]:max-w-[1280px] min-[2230px]:max-w-[1480px] mt-[100px] md:mt-[60px] xl:mt-0 xl:translate-y-[-20px]">
             <span className="inline-block pr-2">мы создаем</span>
 
             <span
