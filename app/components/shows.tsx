@@ -1,8 +1,9 @@
 "use client";
 
 import { ShowItem } from "@/types/model";
-import Image from "next/image";
 import { motion } from "framer-motion";
+import { FadeImg } from "./image";
+import Link from "next/link";
 
 export const Shows = ({ shows }: { shows: ShowItem[] }) => {
   return (
@@ -30,8 +31,8 @@ export const Shows = ({ shows }: { shows: ShowItem[] }) => {
                 key={show.id}
               >
                 <div className="flex flex-col gap-5 w-full md:w-auto">
-                  <Image
-                    src={`/shows/show-${show.id + 1}.png`}
+                  <FadeImg
+                    src={`/shows/${show.id}.webp`}
                     alt={show.title}
                     width={400}
                     height={206}
@@ -58,19 +59,16 @@ export const Shows = ({ shows }: { shows: ShowItem[] }) => {
                   <span className="text-[24px] leading-[125%] uppercase border-b-[1px] border-[--black] pb-3">
                     {show.title}
                   </span>
-                  <div className="show-row">
-                    <div className="label w-[120px]">Автор</div>
-                    <div className="desc">{show.author}</div>
-                  </div>
+                  {show.author && (
+                    <div className="show-row">
+                      <div className="label w-[120px]">Автор</div>
+                      <div className="desc">{show.author}</div>
+                    </div>
+                  )}
 
                   <div className="show-row">
                     <div className="label w-[120px]">О канале</div>
-                    <div className="desc">{show.description}</div>
-                  </div>
-
-                  <div className="show-row">
-                    <div className="label w-[120px]">Видео</div>
-                    <div className="desc">{show.video}</div>
+                    <div className="desc">{show.desc}</div>
                   </div>
 
                   <div className="show-row">
@@ -79,20 +77,10 @@ export const Shows = ({ shows }: { shows: ShowItem[] }) => {
                   </div>
 
                   <div className="show-row">
-                    <div className="label w-[120px]">Аудитория</div>
-                    <div className="desc">{show.audition}</div>
-                  </div>
-
-                  <div className="show-row">
-                    <div className="label w-[120px]">Язык</div>
-                    <div className="desc">{show.lang}</div>
-                  </div>
-
-                  <div className="show-row">
                     <div className="label w-[120px]">Посмотреть</div>
                     <div className="desc">
                       {show.links.map((link, i, array) => (
-                        <a
+                        <Link
                           key={i}
                           href={link.link}
                           target="_blank"
@@ -100,7 +88,7 @@ export const Shows = ({ shows }: { shows: ShowItem[] }) => {
                         >
                           {link.name}
                           {i !== array.length - 1 && ", "}
-                        </a>
+                        </Link>
                       ))}
                     </div>
                   </div>

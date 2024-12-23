@@ -114,10 +114,9 @@ footer .label.error {
 @media screen and (max-width: 1439px) {
   .logo {
     position: relative !important;
-    top: 0!important;
+    top: 0 !important;
   }
 }
-
 
 .glitch {
   position: relative;
@@ -127,9 +126,10 @@ footer .label.error {
 .glitch.pause {
   animation: none;
 }
-.glitch.pause::before, .glitch.pause::after {
+.glitch.pause::before,
+.glitch.pause::after {
   animation: none;
-  content: '';
+  content: "";
 }
 
 .glitch::before {
@@ -167,11 +167,9 @@ footer .label.error {
     transform: skew(-2deg);
   }
 
-
   20% {
     transform: skew(-4deg);
   }
-
 
   30% {
     transform: skew(-4deg);
@@ -185,11 +183,9 @@ footer .label.error {
     transform: skew(0deg);
   }
 
-
   60% {
     transform: skew(-3deg);
   }
-
 
   70% {
     transform: skew(1deg);
@@ -199,11 +195,9 @@ footer .label.error {
     transform: skew(2deg);
   }
 
-
   90% {
     transform: skew(2deg);
   }
-
 }
 
 @keyframes glitch-anim {
@@ -274,7 +268,7 @@ footer .label.error {
 
   65% {
     clip: rect(7px, 9999px, 20px, 0);
-    transform: skew(0.95deg)
+    transform: skew(0.95deg);
   }
 
   70% {
@@ -401,11 +395,20 @@ footer .label.error {
 
   90% {
     clip: rect(76px, 9999px, 41px, 0);
-    transform: skew(0.4deg)
+    transform: skew(0.4deg);
   }
 
   95% {
     clip: rect(11px, 9999px, 82px, 0);
     transform: skew(0.37deg);
   }
+}
+
+.privacy a {
+  @apply text-[--orange] font-[700] transition-all hover:opacity-[0.7];
+}
+
+.privacy .subtitle {
+  @apply text-[19px];
+  font-family: "Involve-Bold";
 }

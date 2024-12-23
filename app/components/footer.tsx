@@ -1,5 +1,6 @@
-import Image from "next/image";
+import Link from "next/link";
 import { Form } from "./form";
+import { FadeImg } from "./image";
 
 export const Footer = () => {
   return (
@@ -13,13 +14,22 @@ export const Footer = () => {
         </div>
       </div>
       <div className="flex flex-col lg:flex-row items-center justify-between mb-6 xl:mb-[100px] gap-6">
-        <Image
+        <FadeImg
           src="/logo.svg"
           alt="Kedoomedia"
           width={240}
           height={12}
           quality={100}
         />
+
+        <Link
+          href="/privacy_policy"
+          className="text-[12px]"
+          // style={{ fontFamily: "var(--font-family)" }}
+        >
+          Политика обработки персональных данных
+        </Link>
+
         <span className="condensed text-[12px] leading-[120%] uppercase">
           ©{new Date().getFullYear()} KedooMedia Ltd. All Rights Reserved
         </span>

@@ -8,6 +8,7 @@ export const Logo = () => {
   useEffect(() => {
     window.scroll({
       top: 0,
+      behavior: "smooth",
     });
   }, []);
 
