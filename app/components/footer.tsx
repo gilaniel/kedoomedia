@@ -31,7 +31,7 @@ export const Footer = () => {
         </Link>
 
         <span className="condensed text-[12px] leading-[120%] uppercase">
-          ©{new Date().getFullYear()} KedooMedia Ltd. All Rights Reserved
+          ©{new Date().getFullYear()} ООО «Кеду Медиа».Все права защищены.
         </span>
       </div>
     </footer>
