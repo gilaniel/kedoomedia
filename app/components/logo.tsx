@@ -5,12 +5,12 @@ import Image from "next/image";
 import { useEffect } from "react";
 
 export const Logo = () => {
-  // useEffect(() => {
-  //   window.scroll({
-  //     top: 0,
-  //     behavior: "smooth",
-  //   });
-  // }, []);
+  useEffect(() => {
+    window.scroll({
+      top: 0,
+      behavior: "smooth",
+    });
+  }, []);
 
   return (
     <>
